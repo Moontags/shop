@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #2a322a;
+  background-color: #0f100f;
   color: #b3aeae;
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@ header h1 {
   text-transform: uppercase;
   padding: 10px 0;
   margin: 10px 0;
-  color: rgb(141, 195, 250);
+  color: rgb(141, 250, 163);
 }
 
 .items li:last-child {
