@@ -1,0 +1,113 @@
+/* Yleiset tyylit */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2a322a;
+  color: #b3aeae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: url('images/IMG_0350.jpeg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white; /* Tee tekstistä valkoinen */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa */
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Tumma läpinäkyvä kerros */
+  border-radius: 8px; /* Sama kuin containerin */
+  z-index: 1;
+}
+
+.container * {
+  position: relative;
+  z-index: 2; /* Nosta sisältö overlayn päälle */
+}
+
+
+header h1 {
+  font-size: 3rem;
+  color: #fc81c9;
+  margin-bottom: 20px;
+}
+
+/* Kauppalistan tyyli */
+.items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.items li {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 10px 0;
+  color: rgb(141, 195, 250);
+}
+
+.items li:last-child {
+  border-bottom: none;
+}
+
+/* Runon tyyli */
+.poetry .runo {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #fc81c9;
+  margin-top: 30px;
+}
+
+/* Responsiivisuus */
+@media screen and (max-width: 768px) {
+  header h1 {
+      font-size: 2.5rem;
+  }
+
+  .items li {
+      font-size: 1.5rem;
+  }
+
+  .poetry .runo {
+      font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  .items li {
+      font-size: 1.2rem;
+  }
+
+  .poetry .runo {
+      font-size: 1.2rem;
+  }
+}
